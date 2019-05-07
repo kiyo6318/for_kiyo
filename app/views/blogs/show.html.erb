@@ -15,7 +15,11 @@
 
   <p>
     <strong>Comment:</strong>
-    <%= @blog.comments.count.to_i + "comments" %>
+    <% if false %>
+      ErrorCause: String can't be coerced into integer
+      FixReason: fix to_i => to_s
+    <% end %>
+    <%= @blog.comments.count.to_s + "comments" %>
   </p>
 
   <p>
