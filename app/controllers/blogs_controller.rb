@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update]
+  # ErrorCause: ain't set :destroy in set_blog
+  #  FixReason: add :destroy in set_blog
+  before_action :set_blog, only: [:show, :edit, :update,:destroy]
 
   def index
     @blogs = Blog.all
@@ -12,7 +14,7 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def create
