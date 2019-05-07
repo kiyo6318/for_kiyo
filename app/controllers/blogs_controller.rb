@@ -42,6 +42,8 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title)
+    # ErrorCause: why don't you permit content
+    # FixReason: Add :content
+    params.require(:blog).permit(:title, :content)
   end
 end

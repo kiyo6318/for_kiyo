@@ -1,5 +1,7 @@
 class Blog < ApplicationRecord
-  has_many :comment
+  # ErrorCause: have to be plural
+  # FixReason: Fix typo (comment --> comments)
+  has_many :comments
 
   validates :title, presence: true
   validates :content, presence: true
