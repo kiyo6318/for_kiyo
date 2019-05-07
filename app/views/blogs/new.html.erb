@@ -1,0 +1,10 @@
+<%# 
+ ErrorCause: you don't need under bar for the file which isn't partial
+ FixReason: Fix typo Filename (_new.html.erb --> new.html.erb )
+#%>
+
+<h1>New Blog</h1>
+
+<%= render 'form', blog: @blog %>
+
+<%= link_to 'Back', blogs_path %>
